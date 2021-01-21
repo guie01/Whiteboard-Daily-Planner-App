@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1;
   }
@@ -9,7 +9,6 @@ body {
     border: none;
     resize: none;
     color: #000000;
-    border-left: 1px solid black;
     padding: 10px;
   }
   
@@ -39,7 +38,10 @@ body {
   .hour {
     background-color: #ffffff;
     color: #000000;
-    border-top: 1px dashed #000000;
+    border-top: 2px solid #000000;
+    padding-top: 30px;
+    border-radius: 25px;
+    font-weight: 700;
   }
   
   .past {
@@ -58,10 +60,9 @@ body {
   }
   
   .saveBtn {
-    border-left: 1px solid black;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    border-radius: 25px;
+    border-color: white;
+    background-color: black;
     color: white;
   }
   

@@ -14,11 +14,10 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="/Assets/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,19 +29,17 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row">
-        <div class="col-sm">
-          9:00 AM
+      <form class="time-block" id="time">
+        <div class="row">
+          <p class="hour col-2">9AM</p>
+          <textarea class="col-8 description" id="inlineFormInput"></textarea>
+          <button type="submit" data-event= "none" class="col-2 saveBtn"><i class="far fa-save"></i></button>
         </div>
-        <div class="col-sm">
-          <input type = "text">
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
+      </form>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="Assets/script.js"></script>
   </body>
 </html>
