@@ -13,11 +13,11 @@ for (let i=1; i<timesArr.length; i++){
     var currentTime = moment().format("hh");
 
     if(timesArr[i] > currentTime){
-      $(".description").attr("style", "background-color: #fc665e");
+      $(".description").attr("style", "background-color: #ced0d6");
     } else if (currentTime == timesArr[i]){
         $(".description").attr("style", "background-color: #ff6961");
     } else if(timesArr[i < currentTime]){
-        $(".description").attr("style", "background-color: ##77dd77");
+        $(".description").attr("style", "background-color: #77dd77");
     }
 }
 
