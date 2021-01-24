@@ -10,7 +10,7 @@ for (let i=1; i<timesArr.length; i++){
     newTimeBlockEL.children(".row").attr("style", "white-space: pre-Wrap"); 
     newTimeBlockEL.children(".row").children(".hour").text(timesArr[i]);
     newTimeBlockEL.children(".row").children(".saveBtn").attr("data-hour", timesArr[i]); 
-    newTimeBlockEL.appendTo(".container"); 
+    newTimeBlockEL.appendTo(".container");
 }
 
 
@@ -40,7 +40,6 @@ $(".saveBtn").on("click", function(event) {
     
 });
 
-// $(".description").text(localStorage.getItem('userInput'));
+    // $(".description").text(localStorage.getItem('userInput'));
 
-console.log(moment().format())
 
