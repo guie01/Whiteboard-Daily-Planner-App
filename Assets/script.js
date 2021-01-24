@@ -1,16 +1,24 @@
 // --- Generate new times blocks ---- //
 let timeBlockCollection = []
-
-
-let timesArr= ["9AM","10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"]; 
+let timesArr= ["9","10", "11", "12", "1", "2", "3", "4", "5"]; 
 
 for (let i=1; i<timesArr.length; i++){
     let newTimeBlockEL= $("#9AM").clone();
     newTimeBlockEL.attr("id", timesArr[i]); 
     newTimeBlockEL.children(".row").attr("style", "white-space: pre-Wrap"); 
-    newTimeBlockEL.children(".row").children(".hour").text(timesArr[i]);
+    newTimeBlockEL.children(".row").children(".hour").text(timesArr[i] + " AM");
     newTimeBlockEL.children(".row").children(".saveBtn").attr("data-hour", timesArr[i]); 
     newTimeBlockEL.appendTo(".container");
+
+    var currentTime = moment().format("hh");
+
+    if(timesArr[i] > currentTime){
+      $(".description").attr("style", "background-color: #77dd77");
+    } else if (currentTime == timesArr[i]){
+        $(".description").attr("style", "background-color: #fc665e");
+    } else if(currentTime < timesArr[i]){
+        $(".description").attr("style", "background-color: #ff6961");
+    }
 }
 
 

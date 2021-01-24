@@ -33,7 +33,7 @@
     <div class="container">
       <form class="time-block" id="9AM">
         <div class="row">
-          <p class="hour col-2">9AM</p>
+          <p class="hour col-2">9 AM</p>
           <textarea class="col-8 description" id="inlineFormInput"></textarea>
           <button type="submit" data-event="none" class="col-2 saveBtn" data-hour="9AM"><i class="far fa-save"></i></button>
         </div>
@@ -45,9 +45,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="Assets/script.js"></script>
 
+<!-- Time showing at top of the page -->
     <script>
       $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm"));
       console.log(moment().format("dddd, MMMM Do YYYY, h:mm"));
+    </script>
+
+<!-- Time color change -->
+    <script>
+      var currentTime = moment().format("hh")
+      if(currentTime == timesArr[i]){
+        $(".time-block").attr("style", "background-color: #58ce7b");
+      }
     </script>
   </body>
 </html>
